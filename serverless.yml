@@ -24,6 +24,14 @@ provider:
   name: aws
   runtime: nodejs12.x
 
+plugins:
+  - serverless-s3-sync
+
+custom:
+  s3Sync:
+    - bucketName: myserverlessproject-90210
+      localDir: UploadData
+
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
